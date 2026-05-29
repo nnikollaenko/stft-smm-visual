@@ -290,6 +290,77 @@
     letter-spacing: 0.05em;
     margin-top: 80px;
   }
+
+  /* ── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 900px) {
+    .page {
+      padding: 56px 40px 80px;
+    }
+    .doc-title { font-size: 34px; }
+    .font-display { font-size: 60px; }
+  }
+
+  @media (max-width: 680px) {
+    .page {
+      padding: 40px 24px 64px;
+    }
+
+    /* Header */
+    .doc-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .doc-meta { text-align: left; }
+    .doc-title { font-size: 28px; }
+
+    /* Section header */
+    .section-title { font-size: 18px; }
+    .section-line { display: none; }
+
+    /* Colors */
+    .colors-row { gap: 14px; }
+    .color-swatch { width: 72px; height: 72px; }
+    .color-hex { font-size: 11px; }
+
+    /* Typography */
+    .font-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .font-display { font-size: 52px; }
+    .font-weight-row { font-size: 13px; }
+
+    /* Moodboard notes */
+    .moodboard-notes { grid-template-columns: 1fr; }
+    .mood-note { border-right: none !important; }
+    .mood-note:nth-last-child(-n+2) {
+      border-bottom: 1px solid var(--gray-mid) !important;
+    }
+    .mood-note:last-child { border-bottom: none !important; }
+
+    /* Grid reference */
+    .ref-wrap {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    /* Links */
+    .links-row { flex-direction: column; }
+    .link-btn { min-width: unset; width: 100%; }
+
+    /* Footer */
+    .doc-footer { flex-direction: column; gap: 8px; }
+  }
+
+  @media (max-width: 420px) {
+    .page { padding: 32px 18px 48px; }
+    .doc-title { font-size: 24px; }
+    .font-display { font-size: 44px; }
+    .color-swatch { width: 58px; height: 58px; }
+    .colors-row { gap: 10px; }
+  }
 </style>
 </head>
 <body>
